@@ -15,7 +15,7 @@ if not userSettings.opengames then
 		userSettings.opengames = {}
 		system.saveUserSettings()
 end
-local OE = require('opengames')
+local OE = require('GameCreator')
 local gamepath = '/Autosave'
 local cr1, cr2,cr3,cr4 = userSettings.opengames.cr1 or 0x989898, userSettings.opengames.cr2 or 0x505050,userSettings.opengames.cr3 or 0x000000,userSettings.opengames.cr4 or 0x757575
 local treemode = 'screen'
@@ -33,7 +33,7 @@ local function changePosition(idk,fromposition,toposition)
   		game.screen[fromposition].raw:moveBackward()
  	end
 end
-local title = win:addChild(GUI.text(1,1,cr2,'Editor 1.5.1'))
+local title = win:addChild(GUI.text(1,1,cr2,'Game Creator Editor'))
 local screen = win:addChild(GUI.container(2,3,160,50))
 local BG = screen:addChild(GUI.panel(1,1,game.window.width,game.window.height,game.window.color))
 local TITLE = screen:addChild(GUI.text(math.floor(game.window.width/2-#game.window.title/2),1,game.window.titleColor,game.window.title))
